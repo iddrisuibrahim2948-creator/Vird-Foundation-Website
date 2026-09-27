@@ -719,6 +719,20 @@ html,body{max-width:100%;overflow-x:hidden;}
 section[id*="humanitarian"],section[id*="education"],section[id*="health"],section[id="wash"],section[id*="food"],section[id*="livelihood"],section[id*="women"],section[id*="child"],section[id*="islamic"],section[id*="hajj"],section[id*="climate"],section[id*="peace"],section[id*="research"]{scroll-margin-top:90px}
 @media (max-width:900px){.programme-layout{grid-template-columns:1fr;gap:28px}.programme-primary{height:330px}.programme-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:600px){.programme-primary{height:250px;border-radius:17px;padding:8px}.programme-primary img{border-radius:12px}.programme-copy h3{font-size:27px!important}.programme-copy .modal-list{grid-template-columns:1fr;gap:7px 0}.programme-gallery{grid-template-columns:1fr;gap:14px;margin-top:24px;padding-top:20px}.programme-gallery-item{height:230px;border-radius:16px}.programme-layout+.reveal{margin-top:26px!important}}
+
+/* Programme layout repair: no header or footer selectors */
+#main > section.vird-programme { box-sizing:border-box; padding:72px clamp(22px,4vw,58px); border-top:5px solid #c6a15b; }
+#main > section.vird-programme.vird-programme-light { background:#fff !important; }
+#main > section.vird-programme.vird-programme-tint { background:#eaf2ee !important; }
+#main > section.vird-programme > .container { box-sizing:border-box; width:100%; max-width:1120px; margin-inline:auto; padding-inline:0; }
+#main > section.vird-programme > .container > * { min-width:0; }
+#main > section.vird-programme > .container h3, #main > section.vird-programme > .container p, #main > section.vird-programme > .container li { overflow-wrap:break-word; }
+#main .vird-photo-row { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; width:100%; max-width:1120px; margin:30px auto 0; align-items:stretch; }
+#main .vird-photo-row > .story-card { width:100%; max-width:none; min-width:0; margin:0; display:flex; flex-direction:column; overflow:hidden; }
+#main .vird-photo-row > .story-card > img.story-img { box-sizing:border-box; width:100%; height:180px; max-height:180px; aspect-ratio:auto; object-fit:contain; object-position:center; background:var(--off-white,#f6f4ee); border-radius:0; }
+#main .vird-photo-row > .story-card > .story-body { flex:1; min-width:0; }
+@media(max-width:800px){ #main .vird-photo-row { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:560px){ #main > section.vird-programme { padding:52px 18px; } #main .vird-photo-row { grid-template-columns:minmax(0,1fr); } }
 </style></head>
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
@@ -834,7 +848,6 @@ section[id*="humanitarian"],section[id*="education"],section[id*="health"],secti
 </div>
 
 </div>
-<div class="programme-extra-photos reveal">
 <article class="story-card reveal" style="--i:1">
     <img 
       src="VIRD foundation pictures/Humanitarian Assistance and Emergency Response pictures2.jpeg"
@@ -847,11 +860,9 @@ section[id*="humanitarian"],section[id*="education"],section[id*="health"],secti
       <p>Women, children and community members gathered during a community outreach and engagement activity.</p>
     </div>
   </article>
-</div>
 </section>
 <section class="section" id="education-human-capital" style="background:var(--off-white);">
 <div class="container">
-
     <article class="story-card reveal" style="--i:1">
     <img 
       src="VIRD foundation pictures/Education program picture.jpeg"
@@ -868,14 +879,13 @@ section[id*="humanitarian"],section[id*="education"],section[id*="health"],secti
 <h3 style="margin-top:8px;font-size:26px;">Education &amp; Human Capital Development</h3>
 <p style="margin-top:14px;color:var(--ink-soft);font-size:15.5px;">We support equitable access to quality learning and opportunities for human development.</p>
 <div style="margin-top:22px;"><h4 class="prog-subhead">Our interventions include:</h4><ul class="modal-list" style="margin-top:10px;"><li>School infrastructure</li><li>Girls' education</li><li>Early childhood development</li><li>Teacher support</li><li>Learning materials</li><li>Scholarships where appropriate</li><li>Literacy and Complementary education program</li><li>Digital learning skills</li><li>STEM and pratical skills</li><li>TVET and Apprenticeships</li><li>Career guidance</li><li>Disability-inclusive education</li><li>Community learning spaces</li><li>Quránic and Islamic education support</li></ul></div>
-</div></div></div><div class="reveal" style="margin-top:44px;">
+</div><div class="reveal" style="margin-top:44px;">
 <div class="prog-info-block"><h4 class="prog-subhead">Where We Work</h4><p class="prog-subtext">Northern Ghana. See our <a href="where-we-work.html" style="color:var(--green-2);font-weight:600;">Where We Work</a> page for our current focus districts.</p></div>
 </div><div class="reveal" style="margin-top:28px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;">
 <p class="prog-subtext" style="font-style:italic;">Related projects and stories for this programme will be listed here once published.</p>
 <a class="btn btn-navy" href="get-involved.html#donate">Support This Programme</a>
   
 </div>
-<div class="programme-extra-photos reveal">
 <article class="story-card reveal" style="--i:1">
     <img 
       src="VIRD foundation pictures/education programme.jpeg "
@@ -888,7 +898,6 @@ section[id*="humanitarian"],section[id*="education"],section[id*="health"],secti
       <p>School children learning together with educational materials during a classroom activity. </p>
     </div>
   </article>
-</div>
 </section>
 <section class="section bg-white" id="health-nutrition">
 <div class="container">
@@ -918,7 +927,7 @@ section[id*="humanitarian"],section[id*="education"],section[id*="health"],secti
 <p class="prog-subtext" style="font-style:italic;">Related projects and stories for this programme will be listed here once published.</p>
 <a class="btn btn-navy" href="get-involved.html#donate">Support This Programme</a>
 </div>
-</div></div></div></div></div>
+</div>
 </section>
 <section class="section" id="wash" style="background:var(--off-white);">
 <div class="container">
@@ -941,13 +950,13 @@ section[id*="humanitarian"],section[id*="education"],section[id*="health"],secti
 <div style="margin-top:22px;"><h4 class="prog-subhead">Our WASH interventions may include:</h4><ul class="modal-list" style="margin-top:10px;"><li>Boreholes</li><li>Water systems</li><li>Sanitation Facilities</li><li>Hygiene promotion</li><li>Menstrual hygiene</li><li>Handwashing facilities</li><li>Hygiene promotion</li><li>School WASH</li><li>Health-facility WASH</li><li>Mosque WASH</li><li>Qurán school WASH</li><li>Water-quality awareness</li><li>Disability-accessible facilities</li><li>Climate-resilient water systems</li><li>Water governance and maintenance</li></ul><p class="prog-subtext" style="font-style:italic;margin-top:10px;">Every infrastructure investment should be accompanied by appropriate operation and maintenance arrangements.</p></div>
 </div>
 
-</div></div></div><div class="reveal" style="margin-top:44px;">
+</div><div class="reveal" style="margin-top:44px;">
 <div class="prog-info-block"><h4 class="prog-subhead">Where We Work</h4><p class="prog-subtext">Northern Ghana. See our <a href="where-we-work.html" style="color:var(--green-2);font-weight:600;">Where We Work</a> page for our current focus districts.</p></div>
 </div><div class="reveal" style="margin-top:28px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;">
 <p class="prog-subtext" style="font-style:italic;">Related projects and stories for this programme will be listed here once published.</p>
 <a class="btn btn-navy" href="get-involved.html#donate">Support This Programme</a>
-</div></div>
 </div>
+
 </section>
 <section class="section bg-white" id="food-security-agriculture">
 <div class="container">
@@ -970,13 +979,13 @@ section[id*="humanitarian"],section[id*="education"],section[id*="health"],secti
 <div style="margin-top:22px;"><h4 class="prog-subhead">Programme areas include:</h4><ul class="modal-list" style="margin-top:10px;"><li>Climate-smart agriculture</li><li>Farmer training</li><li>Seeds and Agricultural inputs</li><li>Irrigation and water management</li><li>Livestock and poultry</li><li>Kitchen and communitygardens</li><li>Post-harvest management</li><li>Storage</li><li>Agro-processing</li><li>Farmer organisations</li><li>Market linkages</li><li>Youth and women agribusiness</li><li>Nutrition-sensitive agriculture</li></ul></div>
 </div>
 
-</div></div></div><div class="reveal" style="margin-top:44px;">
+</div><div class="reveal" style="margin-top:44px;">
 <div class="prog-info-block"><h4 class="prog-subhead">Where We Work</h4><p class="prog-subtext">Northern Ghana. See our <a href="where-we-work.html" style="color:var(--green-2);font-weight:600;">Where We Work</a> page for our current focus districts.</p></div>
 </div><div class="reveal" style="margin-top:28px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;">
 <p class="prog-subtext" style="font-style:italic;">Related projects and stories for this programme will be listed here once published.</p>
 <a class="btn btn-navy" href="get-involved.html#donate">Support This Programme</a>
-</div></div>
 </div>
+
 </section>
 <section class="section" id="livelihoods-economic-empowerment" style="background:var(--off-white);">
 <div class="container">
@@ -998,7 +1007,7 @@ section[id*="humanitarian"],section[id*="education"],section[id*="health"],secti
 <p style="margin-top:14px;color:var(--ink-soft);font-size:15.5px;">Our objective is to help people develop sustainable productive capacity and income opportunities.</p>
 <div style="margin-top:22px;"><h4 class="prog-subhead">Interventions include:</h4><ul class="modal-list" style="margin-top:10px;"><li>Vocational training</li><li>Entrepreneurship</li><li>Business development</li><li>Start-up support</li><li>Apprenticeships</li><li>Savings groups and initiatives</li><li>Financial literacy</li><li>Market linkages</li><li>Digital entrepreneurship</li><li>Youth employment pathways and partnerships</li><li>Women-led enterprises</li><li>Productive assets</li><li>Business mentoring</li></ul></div>
 </div>
-</div><div class="prog-photo-strip reveal"></div><div class="prog-photo-strip reveal"></div><div class="prog-photo-strip reveal"></div></div></div><div class="reveal" style="margin-top:44px;">
+</div><div class="prog-photo-strip reveal"></div><div class="prog-photo-strip reveal"></div><div class="prog-photo-strip reveal"></div><div class="reveal" style="margin-top:44px;">
 <div class="prog-info-block"><h4 class="prog-subhead">Where We Work</h4><p class="prog-subtext">Northern Ghana. See our <a href="where-we-work.html" style="color:var(--green-2);font-weight:600;">Where We Work</a> page for our current focus districts.</p></div>
 </div><div class="reveal" style="margin-top:28px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;">
 <p class="prog-subtext" style="font-style:italic;">Related projects and stories for this programme will be listed here once published.</p>
@@ -1008,7 +1017,6 @@ section[id*="humanitarian"],section[id*="education"],section[id*="health"],secti
   
 
 </div>
-<div class="programme-extra-photos reveal">
 <article class="story-card reveal" style="--i:1">
     <img 
       src="VIRD foundation pictures/livelihoods programme2.jpeg"
@@ -1033,7 +1041,6 @@ section[id*="humanitarian"],section[id*="education"],section[id*="health"],secti
       <p>Transforming practical skills into viable livelihood opportunities through vocational training, business development, productive assets and market linkages.</p>
     </div>
   </article>
-</div>
 </section>
 <section class="section bg-white" id="women-youth-empowerment">
 <div class="container">
@@ -1068,7 +1075,6 @@ section[id*="humanitarian"],section[id*="education"],section[id*="health"],secti
   
   
 </div>
-<div class="programme-extra-photos reveal">
 <article class="story-card reveal" style="--i:1">
     <img 
       src="VIRD foundation pictures/women and youth empowerment2.jpeg "
@@ -1117,8 +1123,6 @@ section[id*="humanitarian"],section[id*="education"],section[id*="health"],secti
       <p>Breaking barriers to women’s participation in modern agriculture by expanding access to mechanization, climate-smart technologies, technical skills and agribusiness opportunities. </p>
     </div>
   </article>
-</div>
-</section>
 
 <section class="section" id="child-protection-social-protection" style="background:var(--off-white);">
 <div class="container">
@@ -1134,20 +1138,20 @@ section[id*="humanitarian"],section[id*="education"],section[id*="health"],secti
       <p>Working with children, caregivers and communities to strengthen safeguarding, family resilience, social protection and inclusive support for those facing vulnerability. </p>
     </div>
   </article>
-
+</section>
 <div>
 <span class="programme-num" style="font-size:13px;">PROGRAMME 08</span>
 <h3 style="margin-top:8px;font-size:26px;">Child Protection &amp; Social Protection</h3>
 <p style="margin-top:14px;color:var(--ink-soft);font-size:15.5px;"><h4>Protecting Children. Supporting Vulnerable Families.</h4> VIRD foundation is committed to protecting children and vulnerable people from: <ul><li>Abuse</li><li>Exploitation</li><li>Neglect</li><li>Trafficking</li><li>Harmful practices</li><li>Hazardous labour</li><li>Sexual exploitation and abuse</li></ul></p>
 <div style="margin-top:22px;"><h4 class="prog-subhead">Our social protection work may include support for:</h4><ul class="modal-list" style="margin-top:10px;"><li>Extremely vulnerable households</li><li>Orphans and vulnerable children</li><li>Older persons</li><li>Persons with disabilities</li><li>Vulnerable women</li><li>Food-insecure families</li><li>Emergency-affected househols</li><li>Vulnerability assessment</li><li>Referral and linkage</li><li>Social protection awareness</li><li>Productive inclusion</li><li>Household resilience initiatives</li></ul></div>
 </div>
-</div></div></div><div class="reveal" style="margin-top:44px;">
+</div><div class="reveal" style="margin-top:44px;">
 <div class="prog-info-block"><h4 class="prog-subhead">Where We Work</h4><p class="prog-subtext">Northern Ghana. See our <a href="where-we-work.html" style="color:var(--green-2);font-weight:600;">Where We Work</a> page for our current focus districts.</p></div>
 </div><div class="reveal" style="margin-top:28px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;">
 <p class="prog-subtext" style="font-style:italic;">Related projects and stories for this programme will be listed here once published.</p>
 <a class="btn btn-navy" href="get-involved.html#donate">Support This Programme</a>
-</div></div>
 </div>
+
 </section>
 <section class="section bg-white" id="islamic-social-finance">
 <div class="container">
@@ -1163,6 +1167,7 @@ section[id*="humanitarian"],section[id*="education"],section[id*="health"],secti
       <p>Mobilizing faith-inspired giving to support education, learning materials, scholarships and other opportunities that enable vulnerable children and young people to learn, develop and build brighter futures.</p>
     </div>
   </article>
+</section>
 <div>
 <span class="programme-num" style="font-size:13px;">PROGRAMME 09</span>
 <h3 style="margin-top:8px;font-size:26px;">Islamic Social Finance &amp; Philanthropy</h3>
@@ -1182,7 +1187,7 @@ section[id*="humanitarian"],section[id*="education"],section[id*="health"],secti
 </div>
 
 </div>
-<div class="programme-extra-photos reveal">
+<section class="section" id="islamic-social-finance" style="background:var(--off-white);">
 <article class="story-card reveal" style="--i:1">
     <img 
       src="VIRD foundation pictures/Islamic social finance picture.jpeg"
@@ -1207,7 +1212,6 @@ section[id*="humanitarian"],section[id*="education"],section[id*="health"],secti
       <p>Channeling Zakat, Sadaqah and other charitable resources towards appropriate social protection, essential needs and livelihood opportunities that strengthen family well-being, dignity and resilience.</p>
     </div>
   </article>
-</div>
 </section>
 <section class="section" id="islamic-community-development" style="background:var(--off-white);">
 <div class="container">
@@ -1225,7 +1229,7 @@ section[id*="humanitarian"],section[id*="education"],section[id*="health"],secti
   </article>
 
 </div><span class="programme-num" style="font-size:13px;">PROGRAMME 10</span><h3 style="margin-top:8px;font-size:26px;">Islamic Community Development</h3>
-<p style="margin-top:14px;color:var(--ink-soft);font-size:15.5px;"><h4>Faith-Inspired Community Development</h4>VIRD foundation recognizes the important role that mosques, Qur'an schools, Islamic educators and community institutions can play in strengthening community well-being.</p><div style="margin-top:22px;"><p class="prog-subhead"><div style="margin-top:22px;"><h5 class="prog-subhead">Our Islamic community development initiatives may include:</h5><ul class="modal-list" style="margin-top:10px;"><li>Mosque construction, rehabilitation and accessibility</li><li>Mosque WASH</li><li>Qur'an schools</li><li>Qur'an education</li><li>Community learning spaces and Islamic libraries</li><li>Teacher/educator support</li><li>Child-safe learning environments</li><li>Literacy initiatives</li><li>Digital learning resources</li><li>Islamic learning facilities</li><li>Islamic educational materials</li></ul></p></div></div></div></div>
+<p style="margin-top:14px;color:var(--ink-soft);font-size:15.5px;"><h4>Faith-Inspired Community Development</h4>VIRD foundation recognizes the important role that mosques, Qur'an schools, Islamic educators and community institutions can play in strengthening community well-being.</p><div style="margin-top:22px;"><p class="prog-subhead"><div style="margin-top:22px;"><h5 class="prog-subhead">Our Islamic community development initiatives may include:</h5><ul class="modal-list" style="margin-top:10px;"><li>Mosque construction, rehabilitation and accessibility</li><li>Mosque WASH</li><li>Qur'an schools</li><li>Qur'an education</li><li>Community learning spaces and Islamic libraries</li><li>Teacher/educator support</li><li>Child-safe learning environments</li><li>Literacy initiatives</li><li>Digital learning resources</li><li>Islamic learning facilities</li><li>Islamic educational materials</li></ul></p></div></div>
 <div class="reveal" style="margin-top:44px;">
 <div class="prog-info-block"><h4 class="prog-subhead">Where We Work</h4><p class="prog-subtext">Northern Ghana. See our <a href="where-we-work.html" style="color:var(--green-2);font-weight:600;">Where We Work</a> page for our current focus districts.</p></div>
 </div>
@@ -1234,7 +1238,7 @@ section[id*="humanitarian"],section[id*="education"],section[id*="health"],secti
 <a class="btn btn-navy" href="get-involved.html#donate">Support This Programme</a>
 </div>
 
-</div>
+
 </section>
 <section class="section bg-white" id="hajj-umrah-sponsorship">
 <div class="container">
@@ -1256,13 +1260,13 @@ section[id*="humanitarian"],section[id*="education"],section[id*="health"],secti
 <div style="margin-top:22px;"><h4 class="prog-subhead">The initiative support:</h4><ul class="modal-list" style="margin-top:10px;"><li>Vulnerable elderly pilgrims</li><li>Low-income individuals</li><li>Women facing financial barriers</li><li>Persons with disablilities</li><li>Other appropriately selected beneficiaries</li></ul><p class="prog-subtext" style="font-style:italic;margin-top:10px;">The process is intended to be:Transparent → Needs-Based → Verified → Accountable → Dignified</p><p>Sponsorship may include appropriate support for travel preparation, documentation, accommodation, welfare and pilgrimage-related assistance.</p></div>
 </div>
 
-</div></div></div><div class="reveal" style="margin-top:44px;">
+<div class="reveal" style="margin-top:44px;">
 <div class="prog-info-block"><h4 class="prog-subhead">Where We Work</h4><p class="prog-subtext">Northern Ghana. See our <a href="where-we-work.html" style="color:var(--green-2);font-weight:600;">Where We Work</a> page for our current focus districts.</p></div>
 </div><div class="reveal" style="margin-top:28px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;">
 <p class="prog-subtext" style="font-style:italic;">Related projects and stories for this programme will be listed here once published.</p>
 <a class="btn btn-navy" href="get-involved.html#donate">Support This Programme</a>
-</div></div>
 </div>
+
 </section>
 <section class="section" id="climate-environmental-resilience" style="background:var(--off-white);">
 <div class="container">
@@ -1275,11 +1279,11 @@ section[id*="humanitarian"],section[id*="education"],section[id*="health"],secti
     >
     <div class="story-body">
       <h4>Community-Led Environmental Restoration & Resilience </h4>
-      <p>: Working with communities to rehabilitate degraded land, conserve natural resources, restore ecosystems and strengthen local capacity to adapt to climate and environmental change. </p>
+      <p>Working with communities to rehabilitate degraded land, conserve natural resources, restore ecosystems and strengthen local capacity to adapt to climate and environmental change. </p>
     </div>
   </article>
 
-</div><span class="programme-num" style="font-size:13px;">PROGRAMME 12</span><h3 style="margin-top:8px;font-size:26px;">Climate &amp; Environmental Resilience</h3><p style="margin-top:14px;color:var(--ink-soft);font-size:15.5px;"><h4>Building Climate-Resilient Communities</h4>VIRD foundation recognizes that climate change can intensify poverty, food insecurity, water shortages, displacement and livelihood vulnerability.</p><div style="margin-top:22px;"><h4 class="prog-subhead">Our work include:</h4><ul class="modal-list" style="margin-top:10px;"><li>Climate-smart agriculture</li><li>Water conservation</li><li>Environmental education</li><li>Tree planting</li><li>Land restoration</li><li>Waste management</li><li>Disaster-risk reduction</li><li>Climate-resilient infrastructure</li><li>Renewable energy solutions where feasible</li><li>Community climate adaption</li></ul></div></div></div></div>
+</div><span class="programme-num" style="font-size:13px;">PROGRAMME 12</span><h3 style="margin-top:8px;font-size:26px;">Climate &amp; Environmental Resilience</h3><p style="margin-top:14px;color:var(--ink-soft);font-size:15.5px;"><h4>Building Climate-Resilient Communities</h4>VIRD foundation recognizes that climate change can intensify poverty, food insecurity, water shortages, displacement and livelihood vulnerability.</p><div style="margin-top:22px;"><h4 class="prog-subhead">Our work include:</h4><ul class="modal-list" style="margin-top:10px;"><li>Climate-smart agriculture</li><li>Water conservation</li><li>Environmental education</li><li>Tree planting</li><li>Land restoration</li><li>Waste management</li><li>Disaster-risk reduction</li><li>Climate-resilient infrastructure</li><li>Renewable energy solutions where feasible</li><li>Community climate adaption</li></ul></div>
 
 <div class="reveal" style="margin-top:44px;">
 <div class="prog-info-block"><h4 class="prog-subhead">Where We Work</h4><p class="prog-subtext">Northern Ghana. See our <a href="where-we-work.html" style="color:var(--green-2);font-weight:600;">Where We Work</a> page for our current focus districts.</p></div>
@@ -1289,7 +1293,7 @@ section[id*="humanitarian"],section[id*="education"],section[id*="health"],secti
 <a class="btn btn-navy" href="get-involved.html#donate">Support This Programme</a>
 </div>
 
-</div>
+
 </section>
 <section class="section bg-white" id="peacebuilding-social-cohesion">
 <div class="container">
@@ -1312,13 +1316,13 @@ section[id*="humanitarian"],section[id*="education"],section[id*="health"],secti
 <div style="margin-top:22px;"><h4 class="prog-subhead">We may support:</h4><ul class="modal-list" style="margin-top:10px;"><li>Community dialogue</li><li>Peace education</li><li>Youth engagement</li><li>Women's participation</li><li>Mediation</li><li>Social cohesion</li><li>Community leadership</li><li>Local problem-solving</li><li>Prevention of violent extremism initiatives where appropriate</li></ul><p>Our approach seeks to strengthen peaceful relationships and inclusive community participation.</p></div>
 </div>
 
-</div></div></div><div class="reveal" style="margin-top:44px;">
+</div><div class="reveal" style="margin-top:44px;">
 <div class="prog-info-block"><h4 class="prog-subhead">Where We Work</h4><p class="prog-subtext">Northern Ghana. See our <a href="where-we-work.html" style="color:var(--green-2);font-weight:600;">Where We Work</a> page for our current focus districts.</p></div>
 </div><div class="reveal" style="margin-top:28px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;">
 <p class="prog-subtext" style="font-style:italic;">Related projects and stories for this programme will be listed here once published.</p>
 <a class="btn btn-navy" href="get-involved.html#donate">Support This Programme</a>
-</div></div>
 </div>
+
 </section>
 <section class="section" id="research-innovation-knowledge" style="background:var(--off-white);">
 <div class="container">
@@ -1335,7 +1339,7 @@ section[id*="humanitarian"],section[id*="education"],section[id*="health"],secti
     </div>
   </article>
 
-</div><span class="programme-num" style="font-size:13px;">PROGRAMME 14</span><h3 style="margin-top:8px;font-size:26px;">Research, Innovation &amp; Knowledge</h3><p style="margin-top:14px;color:var(--ink-soft);font-size:15.5px;">Evidence for Better Decisions. VIRD foundation is committed to using evidence, data and learning to improve programme quality and accountability.</p><div style="margin-top:22px;"><h4 class="prog-subhead">Activities include:</h4><ul class="modal-list" style="margin-top:10px;"><li>Baseline studies</li><li>Community needs assessments</li><li>Vulnerability assessments</li><li>Programme evaluations</li><li>Research</li><li>Data analytics</li><li>Innovation pilots</li><li>Learning events</li><li>Case studies</li><li>Publications</li><li>Knowledge products</li></ul></div></div></div></div>
+</div><span class="programme-num" style="font-size:13px;">PROGRAMME 14</span><h3 style="margin-top:8px;font-size:26px;">Research, Innovation &amp; Knowledge</h3><p style="margin-top:14px;color:var(--ink-soft);font-size:15.5px;">Evidence for Better Decisions. VIRD foundation is committed to using evidence, data and learning to improve programme quality and accountability.</p><div style="margin-top:22px;"><h4 class="prog-subhead">Activities include:</h4><ul class="modal-list" style="margin-top:10px;"><li>Baseline studies</li><li>Community needs assessments</li><li>Vulnerability assessments</li><li>Programme evaluations</li><li>Research</li><li>Data analytics</li><li>Innovation pilots</li><li>Learning events</li><li>Case studies</li><li>Publications</li><li>Knowledge products</li></ul></div>
 
 <div class="reveal" style="margin-top:44px;">
 <div class="prog-info-block"><h4 class="prog-subhead">Where We Work</h4><p class="prog-subtext">Northern Ghana. See our <a href="where-we-work.html" style="color:var(--green-2);font-weight:600;">Where We Work</a> page for our current focus districts.</p></div>
@@ -1345,7 +1349,7 @@ section[id*="humanitarian"],section[id*="education"],section[id*="health"],secti
 <a class="btn btn-navy" href="get-involved.html#donate">Support This Programme</a>
 </div>
 
-</div>
+
 </section>
 <section class="section bg-white" id="programme-activities">
 <div class="container">
@@ -1577,6 +1581,59 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 
 
+</script>
+
+<script>
+(function () {
+  function repair() {
+    var main = document.getElementById('main');
+    if (!main) return;
+    var seven = document.getElementById('women-youth-empowerment');
+    var eight = document.getElementById('child-protection-social-protection');
+    if (seven && eight && seven.contains(eight)) {
+      seven.after(eight);
+      var eightBox = eight.querySelector(':scope > .container');
+      if (!eightBox) { eightBox = document.createElement('div'); eightBox.className = 'container'; eight.prepend(eightBox); }
+      Array.from(seven.children).filter(function (n) { return n !== seven.querySelector(':scope > .container'); }).forEach(function (n) {
+        if (n.classList && n.classList.contains('story-card')) return;
+        eightBox.append(n);
+      });
+    }
+    var finances = Array.from(main.querySelectorAll(':scope > section#islamic-social-finance'));
+    if (finances.length > 1) {
+      var first = finances[0], second = finances[1];
+      var box = first.querySelector(':scope > .container');
+      if (!box) { box = document.createElement('div'); box.className = 'container'; first.append(box); }
+      var cursor = first.nextSibling;
+      while (cursor && cursor !== second) {
+        var next = cursor.nextSibling;
+        box.append(cursor);
+        cursor = next;
+      }
+      Array.from(second.querySelectorAll('article.story-card')).forEach(function (card) { first.append(card); });
+      second.remove();
+    }
+    var programmeIds = ['humanitarian-assistance','education-human-capital','health-nutrition','wash','food-security-agriculture','livelihoods-economic-empowerment','women-youth-empowerment','child-protection-social-protection','islamic-social-finance','islamic-community-development','hajj-umrah-sponsorship','climate-environmental-resilience','peacebuilding-social-cohesion','research-innovation-knowledge'];
+    programmeIds.forEach(function (id, index) {
+      var section = main.querySelector(':scope > section[id="' + id + '"]');
+      if (!section) return;
+      section.classList.add('vird-programme', index % 2 ? 'vird-programme-tint' : 'vird-programme-light');
+      var box = section.querySelector(':scope > .container');
+      if (!box) { box = document.createElement('div'); box.className = 'container'; section.prepend(box); }
+      Array.from(section.children).forEach(function (n) {
+        if (n !== box && !(n.classList && n.classList.contains('story-card'))) box.append(n);
+      });
+      var cards = Array.from(section.querySelectorAll('article.story-card'));
+      if (!cards.length) return;
+      var row = document.createElement('div');
+      row.className = 'vird-photo-row';
+      cards.forEach(function (card) { row.append(card); });
+      box.append(row);
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', repair);
+  else repair();
+}());
 </script>
 </body>
 </html>
